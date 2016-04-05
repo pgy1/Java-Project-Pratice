@@ -1,6 +1,7 @@
-# Java-Project-Pratice
 
-<h4>Java的练习项目代码-目录</h4>
+#Java的练习项目代码
+
+<h3>目录</h3>
 
 ```java
 SpringMVC+Hibernate集成
