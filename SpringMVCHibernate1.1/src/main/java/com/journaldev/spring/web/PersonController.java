@@ -10,8 +10,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.journaldev.spring.model.Person;
 import com.journaldev.spring.service.PersonService;
-import redis.clients.jedis.Jedis;
 
 import javax.annotation.Resource;
 import java.io.IOException;
@@ -42,11 +39,16 @@ public class PersonController {
 	@Resource(name = "jdbcService")
 	JdbcService jdbcService;
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/auth/login", method = RequestMethod.GET)
 	public String login(Model model){
+
+		Map map = new HashMap();
+		map.put("token","2222");
+		map.put("headerName","2222");
+		model.addAttribute("_csrf",map);
 		return "login";
 	}
-	@RequestMapping(value = "/denied", method = RequestMethod.POST)
+	@RequestMapping(value = "/auth/denied", method = RequestMethod.POST)
 	public String denied(Model model){
 		return "denied";
 	}

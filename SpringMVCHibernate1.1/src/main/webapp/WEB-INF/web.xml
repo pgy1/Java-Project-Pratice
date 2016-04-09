@@ -5,6 +5,14 @@
 
 	<!-- 定义了WEB应用的名字 -->
 	<display-name>PGY测试框架</display-name>
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 	<!-- 声明WEB应用的描述信息 -->
 	<description>为了不断完善技术</description>
 
@@ -26,6 +34,7 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath*:spring-bean-config/applicationContext-framework.xml
+			classpath*:spring-bean-config/security.xml
 		</param-value>
 	</context-param>
 

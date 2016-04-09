@@ -4,7 +4,7 @@
 
 ###1.通过Maven获取项目lib包
 
-###2.数据库连接配置[地址](https://github.com/pgy1/Java-Project-Pratice/blob/master/SpringMVCHibernate/src/main/resources/spring-bean-config/database.properties)
+###2.数据库连接配置[地址](https://github.com/pgy1/Java-Project-Pratice/blob/master/SpringMVCHibernate1.0/src/main/resources/spring-bean-config/database.properties)
 
 database.properties
 ```java
