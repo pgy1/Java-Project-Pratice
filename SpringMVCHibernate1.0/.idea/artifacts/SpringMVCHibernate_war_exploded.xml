@@ -67,7 +67,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="E:\Program Files\SpringMVCHibernate1.2.5.2\target/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/SpringMVCHibernate/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="SpringMVCHibernate/web/Web" />
     </root>
