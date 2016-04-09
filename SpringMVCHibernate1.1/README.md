@@ -20,4 +20,8 @@ mysql.password = admin
 
 -数据表文件pgy.sql
 
+###4.Spring Security
+
+-增加框架安全模块
+
 ######作者pengguangyu[博客](http://boke.iflsy.com/)
