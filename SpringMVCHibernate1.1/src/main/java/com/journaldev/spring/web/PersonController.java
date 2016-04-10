@@ -42,13 +42,13 @@ public class PersonController {
 	@RequestMapping(value = "/auth/login", method = RequestMethod.GET)
 	public String login(Model model){
 
-		Map map = new HashMap();
-		map.put("token","2222");
-		map.put("headerName","2222");
-		model.addAttribute("_csrf",map);
+//		Map map = new HashMap();
+//		map.put("token","2222");
+//		map.put("headerName","2222");
+//		model.addAttribute("_csrf",map);
 		return "login";
 	}
-	@RequestMapping(value = "/auth/denied", method = RequestMethod.POST)
+	@RequestMapping(value = "/auth/denied", method = RequestMethod.GET)
 	public String denied(Model model){
 		return "denied";
 	}

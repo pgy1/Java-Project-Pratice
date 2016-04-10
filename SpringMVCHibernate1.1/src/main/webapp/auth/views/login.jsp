@@ -18,11 +18,11 @@
 
 <div id="login-error">${error}</div>
 
-<form action="../j_spring_security_check" method="post">
+<form action="../j_spring_security_check" name='loginForm' method="post">
 
     <p>
         <label for="j_username">Username</label> <input id="j_username" name="j_username" type="text" />
-        <%--<input id="_csrf" name="_csrf" type="hidden" value="3748c228-85c6-4c3f-accf-b17d1efba1c5" />--%>
+        <input id="_csrf" name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}" />
     </p>
 
     <p>

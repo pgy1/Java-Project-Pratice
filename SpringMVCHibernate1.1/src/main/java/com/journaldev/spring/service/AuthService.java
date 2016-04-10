@@ -13,6 +13,7 @@ import java.sql.Types;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 /**
@@ -29,7 +30,7 @@ public class AuthService implements UserDetailsService{
      * @param access
      * @return
      */
-    public Collection<GrantedAuthority> getAuthorities(Integer access) {
+    public Collection<GrantedAuthority> getAuthorities(int access) {
 
         List<GrantedAuthority> authList = new ArrayList<GrantedAuthority>();
 
@@ -37,7 +38,7 @@ public class AuthService implements UserDetailsService{
         authList.add(new GrantedAuthorityImpl("ROLE_USER"));
 
         // 如果参数access为1.则拥有ROLE_ADMIN权限
-        if (access.compareTo(1) == 0) {
+        if (access == 1) {
             authList.add(new GrantedAuthorityImpl("ROLE_ADMIN"));
         }
 
@@ -47,11 +48,11 @@ public class AuthService implements UserDetailsService{
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserDetails user = null;
-
+        System.out.println(username);
         try{
-            com.journaldev.spring.model.User dbuser = (com.journaldev.spring.model.User) jdbcService.queryForSingle("" +
-                    "select username,pass,enabled from Users where username = ?",new Object[]{username},new int[]{Types.VARCHAR});
-            user = new User(dbuser.getUsername(),dbuser.getPass(),getAuthorities(dbuser.getEnabled()));
+            Map dbuser = jdbcService.queryForSingle("" +
+                    "select username,pass,enabled from users where username = ?",new Object[]{username},new int[]{Types.VARCHAR});
+            user = new User(dbuser.get("username").toString(),dbuser.get("pass").toString(),getAuthorities(Integer.parseInt(dbuser.get("enabled").toString())));
             logger.info("User login");
         }catch (Exception e){
             throw new RuntimeException("User does not exist!");
