@@ -23,6 +23,11 @@ mysql.password = admin
 ###4.Spring Security
 
 -增加框架安全模块
-
+--相关文件
+```java
+applicationContext-security.xml 安全配置xml
+GrantedAuthorityImpl.java 授权
+UserDetailsServiceImpl.java 数据库用户名密码查询
+```
 
 ######作者pengguangyu[博客](http://boke.iflsy.com/)
