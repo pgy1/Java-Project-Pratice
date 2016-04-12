@@ -4,9 +4,9 @@
 <h3>Spring框架</h3>
 
 ```java
-1.SpringMVC+Hibernate集成
+1.SpringMVC+Hibernate集成[GO](https://github.com/pgy1/Java-Project-Pratice/tree/master/SpringMVCHibernate1.0)
 
-2.SpringMVC Security使用
+2.SpringMVC Security使用[GO](https://github.com/pgy1/Java-Project-Pratice/tree/master/SpringMVCHibernate1.1)
 
 ```
 
@@ -22,7 +22,7 @@
 <h3>Java模式设计</h3>
 
 ```java
-1.模式设计应用之状态
+1.模式设计应用之状态[GO](https://github.com/pgy1/Java-Project-Pratice/tree/master/SpringMVCHibernate1.2)
 
 ```
 
