@@ -33,6 +33,19 @@ UserDetailsServiceImpl.java 数据库用户名密码查询
 
 ###5.状态设计模式
 
+我的思路是把数据放到具体的状态class中处理，<br />
+Controller只需要调用StateContext上下文切换状态，<br />
+就可以完成不同的状态的工作任务。
+
+```java
+CommonBean.java 公共数据结构
+State.java 状态接口
+StateContext.java 状态上下文管理
+NewState.java 新增状态
+CheckState.java 审核状态
+SendState.java 发送状态
+StateController.java 状态控制器
+```
 
 
 
