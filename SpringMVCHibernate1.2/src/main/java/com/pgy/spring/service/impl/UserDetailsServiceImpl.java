@@ -27,7 +27,7 @@ public class UserDetailsServiceImpl extends JdbcDaoImpl implements UserDetailsSe
         /*Md5PasswordEncoder encoder = new Md5PasswordEncoder();*/
         Map<String,Object> map = this.getJdbcTemplate().queryForMap("SELECT * FROM users WHERE username = ?",new Object[]{s},new int[]{Types.VARCHAR});
         if (!map.isEmpty()){
-            userDetails = new User(s,map.get("pass").toString(),true,true,true,true, getAuthorities(s));
+            userDetails = new User(s,map.get("password").toString(),true,true,true,true, getAuthorities(s));
         }
         return userDetails;
     }
