@@ -39,8 +39,8 @@ public class UserDetailsServiceImpl extends JdbcDaoImpl implements UserDetailsSe
     public List<GrantedAuthority> getAuthorities(String name) {
 
         List<GrantedAuthority> authList = new ArrayList<GrantedAuthority>();
-        Map<String,Object> map = this.getJdbcTemplate().queryForMap("SELECT role FROM roles where username = '"+name+"'");
-        GrantedAuthority authority = new GrantedAuthorityImpl(this.getRolePrefix()+map.get("role").toString().toUpperCase());
+        Map<String,Object> map = this.getJdbcTemplate().queryForMap("SELECT authority FROM authorities  where username = '"+name+"'");
+        GrantedAuthority authority = new GrantedAuthorityImpl(this.getRolePrefix()+map.get("authority").toString().toUpperCase());
         authList.add(authority);
 
         return authList;
