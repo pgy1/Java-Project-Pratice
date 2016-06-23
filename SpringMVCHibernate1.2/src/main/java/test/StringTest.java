@@ -1,4 +1,4 @@
-package test.instance;
+package test;
 
 /**
  * Created by pengguangyu on 2016/6/22.

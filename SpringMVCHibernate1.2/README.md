@@ -47,6 +47,8 @@ SendState.java 发送状态
 StateController.java 状态控制器
 ```
 
+###6.增加单元测试的原文件夹
+在test中测试各种即将使用的技术和验证程序的正确性
 
 
 ######作者pengguangyu[博客](http://boke.iflsy.com/)
