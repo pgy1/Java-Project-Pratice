@@ -15,6 +15,8 @@
 
 2.Jsoup的使用
 
+3.String的格式化输出和输出的时间差[阅读](https://github.com/pgy1/Java-Project-Pratice/blob/master/SpringMVCHibernate1.2/src/main/java/test/StringTest.java)
+
 
 
 <h3>Java模式设计</h3>
